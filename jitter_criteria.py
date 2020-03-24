@@ -8,7 +8,7 @@ import numpy as np
 import random
 import pandas as pd
 
-
+import matplotlib.pyplot as plt
 
 randomized_3 = False
 
@@ -43,7 +43,7 @@ while randomized_3 == False:
             sum_1 = df_conc["Freq_1"].sum() #sum of fix jitters
             sum_2 = df_conc["Freq_2"].sum() #sum of ICI jitters
             
-            if sum_1 + sum_2 > 302:
+            if sum_1 + sum_2 > 302: #5,03 minutes per loop; 30,2 min per test (+13,3) = max. 43,5 min in total
                 good_sum = False 
             elif sum_1 + sum_2 <= 302:
                 good_sum = True
@@ -86,4 +86,3 @@ jitters_ICI = merged_jitters['Freq_2']
 
 x_r_1 = jitters_fix.tolist()
 x_r_2 = jitters_ICI.tolist()
-
