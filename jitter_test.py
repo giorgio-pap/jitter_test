@@ -8,8 +8,6 @@ import numpy as np
 import random
 import pandas as pd
 
-import matplotlib.pyplot as plt
-
 randomized_3 = False
 
 while randomized_3 == False:
